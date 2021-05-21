@@ -61,7 +61,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacrittycmd", NULL };
 static const char *copyqcmd[]  = { "copyq", "show", NULL };
-static const char *bravecmd[]  = { "copyq-to-browser", "brave", NULL };
+static const char *firefoxcmd[]  = { "copyq-to-browser", "firefox", NULL };
 static const char *surfcmd[]  = { "copyq-to-browser", "surf", NULL };
 static const char *netsurfcmd[]  = { "copyq-to-browser", "netsurf-gtk3", NULL };
 static const char *lockcmd[]  = { "physlock", NULL };
@@ -71,7 +71,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	//{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_b,      spawn,          {.v = bravecmd} },
+	{ MODKEY,                       XK_b,      spawn,          {.v = firefoxcmd} },
 	{ MODKEY,                       XK_s,      spawn,          {.v = surfcmd} },
 	{ MODKEY,                       XK_n,      spawn,          {.v = netsurfcmd} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
