@@ -65,6 +65,7 @@ static const char *firefoxcmd[]  = { "copyq-to-browser", "firefox", NULL };
 static const char *surfcmd[]  = { "copyq-to-browser", "surf", NULL };
 static const char *netsurfcmd[]  = { "copyq-to-browser", "netsurf-gtk3", NULL };
 static const char *lockcmd[]  = { "physlock", NULL };
+static const char *switchkeymapcmd[]  = { "switchkeymap", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -89,7 +90,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                       XK_space,  setlayout,      {0} },
+	{ MODKEY,                       XK_space,  spawn,          {.v = switchkeymapcmd} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
